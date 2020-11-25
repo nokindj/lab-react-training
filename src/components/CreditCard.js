@@ -2,6 +2,11 @@ import React from 'react';
 
 class CreditCard extends React.Component {
   render() {
+    let cardLogo = '/img/visa.png';
+    if (this.props.type === 'Master Card') {
+      cardLogo = '/img/master-card.svg';
+    }
+
     return (
       <div
         style={{
@@ -12,11 +17,11 @@ class CreditCard extends React.Component {
           height: '160px',
           borderRadius: '10px',
           padding: '20px',
-          margin: '10px',
+          margin: '15px',
           display: 'inline-block',
         }}
       >
-        <p>{this.props.type}</p>
+        <img src={cardLogo} style={{ width: '60px' }} />
         <p>
           **** **** **** {this.props.number[12]}
           {this.props.number[13]}

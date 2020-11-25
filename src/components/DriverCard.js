@@ -1,4 +1,5 @@
 import React from 'react';
+import Rating from './Rating';
 
 function DriverCard(props) {
   return (
@@ -18,6 +19,8 @@ function DriverCard(props) {
       </div>
       <div>
         <h4>{props.name}</h4>
+        <Rating>{props.rating}</Rating>
+
         <p>
           {props.car.model} - {props.car.licensePlate}
         </p>

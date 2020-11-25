@@ -5,7 +5,7 @@ import Greetings from './components/Greetings';
 import Random from './components/Random';
 import BoxColor from './components/BoxColor';
 import CreditCard from './components/CreditCard';
-// import Rating from './components/Rating';
+import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButton from './components/LikeButton';
 import ClickablePicture from './components/ClickablePicture';
@@ -87,7 +87,7 @@ function App() {
           color="white"
         />
       </div>
-      {/* <h1>
+      <h1>
         <b>Rating</b>
       </h1>
       <div>
@@ -97,7 +97,7 @@ function App() {
         <Rating>3</Rating>
         <Rating>4</Rating>
         <Rating>5</Rating>
-      </div> */}
+      </div>
       <h1>
         <b>DriverCard</b>
       </h1>

@@ -2,17 +2,33 @@ import React from 'react';
 
 class ClickablePicture extends React.Component {
   state = {
-    img: this.props.img,
+    open: false,
   };
   HandleClick = () => {
     this.setState({
-      img: this.props.imgClicked,
+      open: !this.state.open,
     });
   };
+  // HandleClick = () => {
+  //   if(this.state.open) {
+
+  //     this.setState({
+  //       open: false,
+  //     });
+  //   } else {
+  //     this.setState({
+  //       open: true,
+  //     });
+  //   }
+  // };
   render() {
+    let source = this.props.img;
+    if (this.state.open) {
+      source = this.props.imgClicked;
+    }
     return (
       <div>
-        <img src={this.props.img} onClick={this.HandleClick} alt="" />
+        <img src={source} onClick={this.HandleClick} alt="" />
       </div>
     );
   }
